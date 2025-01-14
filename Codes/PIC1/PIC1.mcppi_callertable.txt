@@ -1,0 +1,20 @@
+main
+	init_ADC
+	init_PWM
+	init_interrupts
+	ADC_Read
+	rotate_right
+		set_pwm_duty_cycle
+			Mul_8X8_U
+	rotate_left
+		set_pwm_duty_cycle
+			Mul_8X8_U
+	drive_backward
+	drive_forward
+		set_pwm_duty_cycle
+			Mul_8X8_U
+	stop_car
+	msDelay
+interrupt
+	stop_car
+	drive_backward
