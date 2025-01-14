@@ -4,26 +4,27 @@
 #define LEFT_WHEEL_BACKWARD  0x40  // RC6
 
 // Define LEDs connected to PORTB
-#define LED1 0x10  // LED1 connected to RB4
-#define LED2 0x20  // LED2 connected to RB5
-#define LED3 0x40  // LED3 connected to RB6
-#define LED4 0x80  // LED4 connected to RB7
+#define LED1 RB4_bit  // LED1 connected to RB4
+#define LED2 RB5_bit  // LED2 connected to RB5
+#define LED3 RB6_bit  // LED3 connected to RB6
+#define LED4 RB7_bit  // LED4 connected to RB7
 
 // Flame detector input and LEDs
-#define FLAME_DETECTOR 0x08  // Flame detector input connected to RB3
-#define FLAME_LED 0x04       // LED to indicate flame detection connected to RB2
-#define BLUE_LED 0x02        // Blue LED to indicate no flame connected to RB1
+#define FLAME_DETECTOR RB3_bit  // Flame detector input connected to RB3
+#define FLAME_LED RB2_bit       // LED to indicate flame detection connected to RB2
+#define BLUE_LED RB1_bit        // Blue LED to indicate no flame connected to RB1
 
 // Motion detector and buzzer
-#define MOTION_DETECTOR 0x10  // Motion detector input connected to RD4
-#define MLED 0x20             // Active buzzer module connected to RD5
-#define BUZZER 0x01           // Buzzer connected to RB0
-#define BUZZERI 0x40          // Additional buzzer connected to RD6
-
-// Reverse indicator LED
-#define REVERSE_LED 0x10      // Reverse indicator LED connected to RC4
+#define MOTION_DETECTOR RD4_bit  // Motion detector input connected to RD4
+#define mled RD5_bit           // Active buzzer module connected to RD5
+#define buzzer RB0_bit
+#define buzzeri RD6_bit
+// Define LED connected to RC4
+#define REVERSE_LED RC4_bit  // Reverse indicator LED connected to RC4
+#define trigger RB0_bit
 
 unsigned int ldrValue;
+
 
 // Function prototypes
 void init_ADC();
