@@ -1,0 +1,14 @@
+main
+	__CC2DW
+		____DoICP
+	pwm_compare_mode_init
+	init_sonar
+	set_servo_position1
+		Div_16X16_U
+		delay
+	delay
+interrupt
+	read_sonar
+		usDelay
+		Mul_32x32_U
+		Div_32x32_U
